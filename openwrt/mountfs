@@ -16,6 +16,7 @@ LOG_FILE_PATH=/tmp/${APP}.log
 
 start() {
   echo -e "LOG_FILE_PATH: $LOG_FILE_PATH"
+  mkdir -p $MOUNT_DIR
   $SCRIPT_PATH mount $FROM_DIR  $MOUNT_DIR --cache-dir /tmp --allow-other --vfs-cache-mode writes --header "Referer:https://www.aliyundrive.com/drive" &> $LOG_FILE_PATH &
 }
 
