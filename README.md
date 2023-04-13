@@ -13,7 +13,7 @@
 opkg update
 opkg install rclone
 
-cp -a openwrt/rclone /bin/rclone
+cp -a openwrt/openwrt_rclone /bin/rclone
 chmod + /bin/rclone
 ```
 
