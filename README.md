@@ -4,7 +4,7 @@
 
 ### OpenWRT
 
-**Default FROM_DIR: ** `alist:/`
+**Default FROM_DIR:** `alist:/`
 
 **MOUNT_DIR:** `/mnt/alist`
 
