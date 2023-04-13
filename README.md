@@ -15,7 +15,7 @@ opkg update
 opkg install rclone
 
 cp -a openwrt/openwrt_rclone /bin/rclone
-chmod + /bin/rclone
+chmod +x /bin/rclone
 ```
 
 #### 2、mount fs
