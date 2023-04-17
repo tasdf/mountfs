@@ -7,13 +7,16 @@ START=99
 SERVICE_WRITE_PID=1
 SERVICE_DAEMONIZE=1
 
+CONFIG_DIR="/root/.config/rclone/rclone.conf"
+MOUNT_NAME="alist"
+
 APP=rclone
 SCRIPT_PATH=/bin/$APP
-FROM_DIR=alist:/
-MOUNT_DIR=/mnt/alist
-CONFIG_DIR="/root/.config/rclone/rclone.conf"
+FROM_DIR=${MOUNT_NAME}:/
+MOUNT_DIR=/mnt/${MOUNT_NAME}
 
-LOG_FILE_PATH=/tmp/${APP}.log
+
+LOG_FILE_PATH=/tmp/${APP}_${MOUNT_NAME}.log
 
 start() {
   echo -e "LOG_FILE_PATH: $LOG_FILE_PATH"
